@@ -1,7 +1,5 @@
 const WHATSAPP_NUMBER = '558391667053';
 
-if (window.SimpleAnime) new window.SimpleAnime();
-
 document.querySelectorAll('[data-whatsapp]').forEach((link) => {
   const message = link.dataset.whatsapp || 'Olá! Gostaria de falar com a Pet Salon.';
   link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -101,36 +99,12 @@ document.querySelectorAll('.filter-button').forEach((button) => {
 
 const navLinks = [...document.querySelectorAll('.desktop-nav .nav-link')];
 const sections = [...document.querySelectorAll('#inicio, #sobre, #servicos, #localizacao, #contato')];
-const animatedTitles = [...document.querySelectorAll('main h2')];
-animatedTitles.forEach((title) => { title.dataset.animeScroll = ''; });
 if ('IntersectionObserver' in window) {
-  const titleObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('anime');
-        titleObserver.unobserve(entry.target);
-      }
-    });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-  animatedTitles.forEach((title) => titleObserver.observe(title));
-
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { rootMargin: '0px 0px -50px 0px', threshold: 0.06 });
-  document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
-
   const navObserver = new IntersectionObserver((entries) => {
     const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
     if (visible) navLinks.forEach((link) => link.classList.toggle('active', link.hash === `#${visible.target.id}`));
   }, { rootMargin: '-25% 0px -60% 0px' });
   sections.forEach((section) => navObserver.observe(section));
-} else {
-  document.querySelectorAll('.reveal').forEach((element) => element.classList.add('visible'));
 }
 
 const reviewsTrack = document.querySelector('.reviews-track');
@@ -144,7 +118,7 @@ if (reviewsTrack) {
     const card = reviewsTrack.querySelector('.review-card');
     const gap = parseFloat(getComputedStyle(reviewsTrack).columnGap) || 0;
     const direction = arrow.dataset.reviewDirection === 'next' ? 1 : -1;
-    reviewsTrack.scrollBy({ left: direction * (card.getBoundingClientRect().width + gap), behavior: 'smooth' });
+    reviewsTrack.scrollBy({ left: direction * (card.getBoundingClientRect().width + gap), behavior: 'auto' });
   }));
   reviewsTrack.addEventListener('scroll', updateReviewArrows, { passive: true });
   window.addEventListener('resize', updateReviewArrows);
