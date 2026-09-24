@@ -7,6 +7,7 @@ Site institucional responsivo em HTML, CSS e JavaScript. Abra `index.html` no na
 - `index.html`: conteúdo e estrutura da página.
 - `styles.css`: sistema visual, responsividade e animações.
 - `script.js`: navegação móvel, abas, filtros, entrada na rolagem e links de WhatsApp.
+- `puglins/simple-anime.js`: animação do título inicial; os títulos das seções usam o mesmo efeito ao entrar na tela.
 - `img/`: fotos entregues para o projeto e imagem editorial gerada para o hero.
 - `documentos/paleta-e-direcao-visual.md`: cores, tipografia, uso de imagens e pendências de validação.
 

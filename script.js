@@ -1,5 +1,7 @@
 const WHATSAPP_NUMBER = '558391667053';
 
+if (window.SimpleAnime) new window.SimpleAnime();
+
 document.querySelectorAll('[data-whatsapp]').forEach((link) => {
   const message = link.dataset.whatsapp || 'Olá! Gostaria de falar com a Pet Salon.';
   link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -99,7 +101,19 @@ document.querySelectorAll('.filter-button').forEach((button) => {
 
 const navLinks = [...document.querySelectorAll('.desktop-nav .nav-link')];
 const sections = [...document.querySelectorAll('#inicio, #sobre, #servicos, #localizacao, #contato')];
+const animatedTitles = [...document.querySelectorAll('main h2')];
+animatedTitles.forEach((title) => { title.dataset.animeScroll = ''; });
 if ('IntersectionObserver' in window) {
+  const titleObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('anime');
+        titleObserver.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  animatedTitles.forEach((title) => titleObserver.observe(title));
+
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
