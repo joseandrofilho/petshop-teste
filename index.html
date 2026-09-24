@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080f3b" />
+    <meta name="description" content="Pet Salon by Marcio Rodrigo: estética animal, banho com ozônio e um cuidado pensado para o seu pet em João Pessoa." />
+    <title>Pet Salon by Marcio Rodrigo | Cuidado em cada detalhe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <svg class="svg-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" /></symbol>
+      <symbol id="icon-spark" viewBox="0 0 48 48"><path d="M24 3c1.8 12 9 19.2 21 21-12 1.8-19.2 9-21 21C22.2 33 15 25.8 3 24 15 22.2 22.2 15 24 3Z" /></symbol>
+      <symbol id="icon-heart" viewBox="0 0 48 48"><path d="M24 41 7.5 25.4C-2 16.2 10.7 1.9 21 11l3 2.7 3-2.7C37.3 1.9 50 16.2 40.5 25.4L24 41Z" /></symbol>
+      <symbol id="icon-paw" viewBox="0 0 48 48"><path d="M24 24c-4 0-6 4-9 7-2.3 2.4-3.2 4.7-2.1 7 1.8 4 6.8 2.5 11.1 1.7 4.3.8 9.3 2.3 11.1-1.7 1.1-2.3.2-4.6-2.1-7-3-3-5-7-9-7ZM9 21c-2.4.7-5-1.7-5.8-5.5-.8-3.8.5-7 2.9-7.7 2.4-.7 5 1.7 5.8 5.5.8 3.8-.5 7-2.9 7.7Zm10-5c-2.5.3-4.7-2.7-5-6.7-.3-4 1.5-7.5 4-7.8 2.5-.3 4.7 2.7 5 6.7.3 4-1.5 7.5-4 7.8Zm10 0c-2.5-.3-4.3-3.8-4-7.8.3-4 2.5-7 5-6.7 2.5.3 4.3 3.8 4 7.8-.3 4-2.5 7-5 6.7Zm10 5c-2.4-.7-3.7-3.9-2.9-7.7.8-3.8 3.4-6.2 5.8-5.5 2.4.7 3.7 3.9 2.9 7.7-.8 3.8-3.4 6.2-5.8 5.5Z" /></symbol>
+      <symbol id="icon-pin" viewBox="0 0 48 48"><path d="M24 45S8 29.7 8 19a16 16 0 1 1 32 0c0 10.7-16 26-16 26Z" /><circle cx="24" cy="19" r="5" /></symbol>
+      <symbol id="icon-chat" viewBox="0 0 48 48"><path d="M40 22a16 16 0 0 1-23.5 14.2L8 39l2.8-8.5A16 16 0 1 1 40 22Z" /><path d="M17 17c2 7 6 11 13 13" /></symbol>
+    </svg>
+
+    <header class="site-header" id="topo">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="Pet Salon, voltar ao início"><img src="img/logo-site-transparente.png" alt="Pet Salon by Marcio Rodrigo" width="78" height="78" /><span>Pet Salon<small>by Marcio Rodrigo</small></span></a>
+        <nav class="desktop-nav" aria-label="Navegação principal">
+          <a class="nav-link active" href="#inicio">Início</a><a class="nav-link" href="#sobre">Sobre nós</a><a class="nav-link" href="#servicos">Serviços</a><a class="nav-link" href="#localizacao">Localização</a><a class="nav-link" href="#contato">Contato</a>
+        </nav>
+        <a class="button button-primary header-cta" data-whatsapp="Olá! Quero agendar um atendimento para o meu pet." target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp <svg><use href="#icon-arrow" /></svg></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Navegação móvel" hidden>
+        <a href="#inicio">Início</a><a href="#sobre">Sobre nós</a><a href="#servicos">Serviços</a><a href="#produtos">Produtos</a><a href="#localizacao">Localização</a><a href="#contato">Contato</a>
+        <a class="button button-primary" data-whatsapp="Olá! Quero agendar um atendimento para o meu pet." target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-sun" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow"><span class="eyebrow-line"></span> ESTÉTICA ANIMAL EM JOÃO PESSOA</span>
+            <h1 id="hero-title">Cuidado que <em>transforma</em> cada detalhe<span class="title-dot">.</span></h1>
+            <p>Banho, tosa e estética pet com atenção, carinho e um atendimento pensado para deixar seu melhor amigo ainda mais bonito, confortável e bem cuidado.</p>
+            <div class="hero-actions"><a class="button button-primary button-large" data-whatsapp="Olá! Quero agendar um atendimento para o meu pet." target="_blank" rel="noopener noreferrer">Agendar atendimento <svg><use href="#icon-arrow" /></svg></a><a class="text-link" href="#servicos">Conhecer serviços <svg><use href="#icon-arrow" /></svg></a></div>
+            <div class="hero-note"><span class="note-icon"><svg><use href="#icon-heart" /></svg></span><span>Seu pet merece um momento<br />de cuidado especial.</span></div>
+          </div>
+          <div class="hero-art reveal">
+            <div class="hero-orbit" aria-hidden="true"></div>
+            <div class="hero-image-wrap"><img src="img/hero-cao-gato-editorial.png" alt="Imagem editorial de um cão e um gato juntos" fetchpriority="high" /></div>
+            <span class="hero-sticker" aria-hidden="true"><svg><use href="#icon-paw" /></svg><span>cuidado<br />com afeto</span></span>
+            <span class="hero-star hero-star-one" aria-hidden="true">✦</span><span class="hero-star hero-star-two" aria-hidden="true">✦</span>
+          </div>
+        </div>
+        <div class="hero-curve" aria-hidden="true"></div>
+      </section>
+
+      <section class="benefits section" aria-labelledby="benefits-title">
+        <div class="container">
+          <div class="section-intro centered reveal"><span class="eyebrow">O JEITO PET SALON</span><h2 id="benefits-title">Um atendimento feito <em>pensando no seu pet.</em></h2></div>
+          <div class="benefits-grid">
+            <article class="benefit-card reveal"><span class="icon-circle"><svg><use href="#icon-heart" /></svg></span><span class="card-number">01</span><h3>Cuidado em cada detalhe</h3><p>Um momento de atenção e carinho em cada etapa do atendimento.</p></article>
+            <article class="benefit-card reveal"><span class="icon-circle"><svg><use href="#icon-paw" /></svg></span><span class="card-number">02</span><h3>Atendimento personalizado</h3><p>O cuidado considera o comportamento e as necessidades de cada pet.</p></article>
+            <article class="benefit-card reveal"><span class="icon-circle"><svg><use href="#icon-spark" /></svg></span><span class="card-number">03</span><h3>Um espaço feito com carinho</h3><p>Um ambiente para receber seu melhor amigo com acolhimento.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="sobre" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="about-photos reveal">
+            <div class="about-main-photo"><img src="img/apresentação-do-dono/foto-do-dono.jpg" alt="Marcio Rodrigo ao lado de um cão atendido na Pet Salon" loading="lazy" /><span class="photo-label">por trás de cada cuidado <svg><use href="#icon-heart" /></svg></span></div>
+            <div class="about-small-photo photo-a"><img src="img/pets/foto-02.jpg" alt="Cão branco fotografado na Pet Salon" loading="lazy" /></div>
+            <div class="about-small-photo photo-b"><img src="img/pets/foto-08.jpg" alt="Cão de pelagem clara após o cuidado" loading="lazy" /></div>
+          </div>
+          <div class="about-copy reveal"><span class="eyebrow"><span class="eyebrow-line"></span> SOBRE NÓS</span><h2 id="about-title">Mais do que estética, <em>cuidado de verdade.</em></h2><p>No centro de estética animal (Pet Salon), cada pet recebe um atendimento individualizado, respeitando seu comportamento, suas necessidades e seu bem-estar.</p><p>Mais do que um momento de beleza, queremos que o cuidado seja uma experiência acolhedora para você e seu companheiro.</p><a class="button button-outline" href="https://www.instagram.com/petsalonmarciorodrigo/" target="_blank" rel="noopener noreferrer">Conheça a Pet Salon <svg><use href="#icon-arrow" /></svg></a><span class="about-decoration" aria-hidden="true">✳</span></div>
+        </div>
+      </section>
+
+      <section class="services section" id="servicos" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-heading reveal"><div><span class="eyebrow">SERVIÇOS & CUIDADO</span><h2 id="services-title">Tudo que seu pet precisa para ficar <em>ainda mais lindo.</em></h2></div><p>Conheça nossos serviços e encontre o cuidado ideal para o seu companheiro.</p></div>
+          <div class="service-tabs" role="tablist" aria-label="Serviços da Pet Salon"><button class="service-tab active" type="button" role="tab" id="tab-banho" aria-controls="panel-banho" aria-selected="true" tabindex="0" data-tab="banho">Banho com ozônio</button><button class="service-tab" type="button" role="tab" id="tab-petshop" aria-controls="panel-petshop" aria-selected="false" tabindex="-1" data-tab="petshop">Petshop</button></div>
+          <div class="service-panel active" id="panel-banho" role="tabpanel" aria-labelledby="tab-banho" tabindex="0">
+            <div class="service-image"><img src="img/servicos-banho/banho-3.jpg" alt="Cão durante o banho na Pet Salon" loading="lazy" /><span class="image-tag">um momento só dele <svg><use href="#icon-paw" /></svg></span></div>
+            <div class="service-content"><span class="eyebrow">01 / SERVIÇOS</span><h3>Banho com <em>ozônio</em></h3><p>Um cuidado de higiene e beleza com atenção ao conforto do seu pet durante o atendimento.</p><ul><li>Atendimento pensado para cada animal</li><li>Informações e disponibilidade sob consulta</li><li>Agendamento direto com a equipe</li></ul><div class="service-actions"><a class="button button-primary" data-whatsapp="Olá! Gostaria de consultar a disponibilidade do banho com ozônio." target="_blank" rel="noopener noreferrer">Consultar disponibilidade <svg><use href="#icon-arrow" /></svg></a><a class="text-link" data-whatsapp="Olá! Quero agendar banho com ozônio para o meu pet." target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a></div></div>
+          </div>
+          <div class="service-panel" id="panel-petshop" role="tabpanel" aria-labelledby="tab-petshop" tabindex="0" hidden>
+            <div class="service-image service-image-shop"><img src="img/pets/foto-06.jpg" alt="Cão fotografado na Pet Salon" loading="lazy" /><span class="image-tag">para cada fase da vida <svg><use href="#icon-heart" /></svg></span></div>
+            <div class="service-content"><span class="eyebrow">02 / PETSHOP</span><h3>Petshop para o <em>seu companheiro</em></h3><p>Converse com a equipe para conhecer os produtos disponíveis para a rotina e o bem-estar do seu pet.</p><ul><li>Categorias para explorar e consultar</li><li>Orientação sobre disponibilidade na loja</li><li>Contato simples pelo WhatsApp</li></ul><div class="service-actions"><a class="button button-primary" data-whatsapp="Olá! Gostaria de consultar os produtos disponíveis no petshop." target="_blank" rel="noopener noreferrer">Consultar disponibilidade <svg><use href="#icon-arrow" /></svg></a><a class="text-link" data-whatsapp="Olá! Gostaria de falar com a Pet Salon sobre o petshop." target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products section" id="produtos" aria-labelledby="products-title"><div class="container">
+        <div class="section-heading reveal"><div><span class="eyebrow">NA LOJA</span><h2 id="products-title">Os favoritos do <em>seu melhor amigo.</em></h2></div><p>Explore as categorias e consulte a equipe sobre os itens disponíveis na loja.</p></div>
+        <div class="filter-group" role="group" aria-label="Filtrar categorias por animal"><button class="filter-button active" type="button" data-filter="todos" aria-pressed="true">Todos</button><button class="filter-button" type="button" data-filter="cachorros" aria-pressed="false">Cachorros</button><button class="filter-button" type="button" data-filter="gatos" aria-pressed="false">Gatos</button></div>
+        <div class="product-grid">
+          <article class="product-card reveal" data-category="Rações"><div class="product-visual visual-food"><span class="visual-ring"></span><svg viewBox="0 0 180 180" aria-hidden="true"><path d="M45 40h90l-8 105H53L45 40Z" fill="#fffaf1" stroke="currentColor" stroke-width="4" /><path d="M46 60h88M58 116h64" stroke="currentColor" stroke-width="4" /><circle cx="90" cy="88" r="19" fill="#d6a74d" /><path d="M80 89c7-11 18-11 22 0" fill="none" stroke="#15234d" stroke-width="4" stroke-linecap="round" /></svg></div><div class="product-info"><span class="product-index">01 / CATEGORIA</span><h3>Rações</h3><p>Opções de alimentação para consultar com a equipe.</p><a class="product-link" data-product="Rações" data-whatsapp="Olá! Gostaria de consultar as rações disponíveis na loja." target="_blank" rel="noopener noreferrer">Consultar produtos <svg><use href="#icon-arrow" /></svg></a></div></article>
+          <article class="product-card reveal" data-category="Brinquedos"><div class="product-visual visual-toys"><span class="visual-ring"></span><svg viewBox="0 0 180 180" aria-hidden="true"><path d="M57 72 42 57a15 15 0 1 1 16-16l16 16 34 34 15-15a15 15 0 1 1 16 16l-15 15a15 15 0 1 1-16 16L74 89l-16 16a15 15 0 1 1-16-16L57 72Z" fill="#fffaf1" stroke="currentColor" stroke-width="4" stroke-linejoin="round" /></svg></div><div class="product-info"><span class="product-index">02 / CATEGORIA</span><h3>Brinquedos</h3><p>Ideias para transformar a rotina em brincadeira.</p><a class="product-link" data-product="Brinquedos" data-whatsapp="Olá! Gostaria de consultar os brinquedos disponíveis na loja." target="_blank" rel="noopener noreferrer">Consultar produtos <svg><use href="#icon-arrow" /></svg></a></div></article>
+          <article class="product-card reveal" data-category="Acessórios"><div class="product-visual visual-accessories"><span class="visual-ring"></span><svg viewBox="0 0 180 180" aria-hidden="true"><path d="M39 91c0-29 22-49 51-49s51 20 51 49-22 49-51 49-51-20-51-49Z" fill="none" stroke="currentColor" stroke-width="16" /><rect x="76" y="27" width="29" height="30" rx="6" fill="#fffaf1" stroke="currentColor" stroke-width="4" /><path d="M90 122v25m-15 0h30" stroke="currentColor" stroke-width="5" stroke-linecap="round" /></svg></div><div class="product-info"><span class="product-index">03 / CATEGORIA</span><h3>Acessórios</h3><p>Detalhes para acompanhar cada passeio e momento.</p><a class="product-link" data-product="Acessórios" data-whatsapp="Olá! Gostaria de consultar os acessórios disponíveis na loja." target="_blank" rel="noopener noreferrer">Consultar produtos <svg><use href="#icon-arrow" /></svg></a></div></article>
+          <article class="product-card reveal" data-category="Higiene e cuidados"><div class="product-visual visual-care"><span class="visual-ring"></span><svg viewBox="0 0 180 180" aria-hidden="true"><rect x="58" y="53" width="64" height="91" rx="11" fill="#fffaf1" stroke="currentColor" stroke-width="4" /><path d="M73 53V36h34v17M91 35V24h30" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" /><path d="M90 77c6 11 14 19 14 27a14 14 0 0 1-28 0c0-8 8-16 14-27Z" fill="#d6a74d" /></svg></div><div class="product-info"><span class="product-index">04 / CATEGORIA</span><h3>Higiene e cuidados</h3><p>Itens para uma rotina de atenção e bem-estar.</p><a class="product-link" data-product="Higiene e cuidados" data-whatsapp="Olá! Gostaria de consultar os produtos de higiene e cuidados disponíveis na loja." target="_blank" rel="noopener noreferrer">Consultar produtos <svg><use href="#icon-arrow" /></svg></a></div></article>
+        </div>
+        <p class="product-disclaimer">Categorias ilustrativas. Consulte a disponibilidade dos produtos com a equipe.</p>
+      </div></section>
+
+      <section class="gallery section" id="galeria" aria-labelledby="gallery-title"><div class="container">
+        <div class="section-heading reveal"><div><span class="eyebrow">MOMENTOS REAIS</span><h2 id="gallery-title">Resultados que <em>falam por si.</em></h2></div><p>Alguns dos rostinhos que já passaram pelo nosso espaço.</p></div>
+        <div class="gallery-grid"><figure class="gallery-item gallery-tall reveal"><img src="img/pets/foto-07.jpg" alt="Cão preto e branco atendido na Pet Salon" loading="lazy" /><figcaption>charme em cada detalhe <span>✦</span></figcaption></figure><figure class="gallery-item reveal"><img src="img/pets/foto-04.jpg" alt="Buldogue fotografado na Pet Salon" loading="lazy" /><figcaption>personalidade de sobra <span>✦</span></figcaption></figure><figure class="gallery-item reveal"><img src="img/servicos-banho/banho-2.jpg" alt="Cão durante um banho na Pet Salon" loading="lazy" /><figcaption>um banho de carinho <span>✦</span></figcaption></figure><figure class="gallery-item gallery-wide reveal"><img src="img/pets/foto-08.jpg" alt="Cão claro com gravata após atendimento na Pet Salon" loading="lazy" /><figcaption>pronto para encantar <span>✦</span></figcaption></figure></div>
+        <div class="gallery-bottom"><span>Mais momentos de cuidado por lá <svg><use href="#icon-arrow" /></svg></span><a class="button button-outline" href="https://www.instagram.com/petsalonmarciorodrigo/" target="_blank" rel="noopener noreferrer">Veja mais no Instagram <svg><use href="#icon-arrow" /></svg></a></div>
+      </div></section>
+
+      <section class="location section" id="localizacao" aria-labelledby="location-title"><div class="container">
+        <div class="section-intro centered reveal"><span class="eyebrow">VENHA NOS VISITAR</span><h2 id="location-title">Estamos esperando <em>por vocês.</em></h2><p>Venha conhecer a Pet Salon e proporcionar ao seu pet uma experiência de cuidado completa.</p></div>
+        <div class="location-grid"><div class="location-card reveal"><span class="location-icon"><svg><use href="#icon-pin" /></svg></span><h3>Pet Salon <em>by Marcio Rodrigo</em></h3><div class="location-detail"><span>ENDEREÇO</span><p>R. Raimundo Adeizo Rodrigues, 17<br />Loja 103 · João Paulo II<br />João Pessoa – PB, 58076-120</p></div><div class="location-detail"><span>HORÁRIO DE FUNCIONAMENTO</span><p>Segunda a sábado, das 08h às 18h.</p></div><div class="location-detail"><span>CONTATO</span><p><a href="tel:+558391667053">(83) 9166-7053</a></p></div><div class="location-actions"><a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=Pet+Salon+By+Marcio+Rodrigo%2C+R.+Raimundo+Adeizo+Rodrigues%2C+17%2C+Jo%C3%A3o+Pessoa" target="_blank" rel="noopener noreferrer">Como chegar <svg><use href="#icon-arrow" /></svg></a><a class="text-link" data-whatsapp="Olá! Gostaria de falar com a equipe da Pet Salon." target="_blank" rel="noopener noreferrer">Falar com a equipe</a></div></div><div class="map-wrap reveal"><iframe title="Mapa da Pet Salon em João Pessoa" src="https://maps.google.com/maps?q=-7.1780533,-34.875345&amp;z=17&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><span class="map-badge" aria-hidden="true"><svg><use href="#icon-paw" /></svg></span></div></div>
+      </div></section>
+
+      <section class="reviews section" aria-labelledby="reviews-title">
+        <div class="container">
+          <div class="reviews-header reveal">
+            <div><span class="eyebrow">QUEM CONHECE, CONTA</span><h2 id="reviews-title">Carinho que conquista <em>corações.</em></h2></div>
+            <div class="reviews-controls" aria-label="Navegar pelas avaliações">
+              <button class="reviews-arrow" type="button" data-review-direction="previous" aria-label="Avaliação anterior" disabled>←</button>
+              <button class="reviews-arrow" type="button" data-review-direction="next" aria-label="Próxima avaliação">→</button>
+            </div>
+          </div>
+          <div class="reviews-track reveal" aria-label="Avaliações de clientes no Google Maps" tabindex="0">
+            <article class="review-card">
+              <div class="review-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+              <blockquote>“A experiência foi muito positiva! O atendimento é excelente, a equipe atenciosa e prestativa, e o ambiente é organizado e agradável. Dá pra ver o cuidado em cada detalhe. Recomendo e com certeza voltarei mais vezes!”</blockquote>
+              <div class="review-author"><span class="review-avatar" aria-hidden="true">M</span><div><strong>Moema Nascimento</strong><span>Avaliação no Google Maps</span></div></div>
+            </article>
+            <article class="review-card">
+              <div class="review-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+              <blockquote>“Fui muito bem atendida, equipe educada e sempre disposta a ajudar. O ambiente é limpo, organizado e transmite confiança. Serviço de qualidade e ótima experiência do início ao fim. Recomendo!”</blockquote>
+              <div class="review-author"><span class="review-avatar" aria-hidden="true">J</span><div><strong>Joice Ferreira</strong><span>Avaliação no Google Maps</span></div></div>
+            </article>
+            <article class="review-card">
+              <div class="review-stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
+              <blockquote>“A equipe e excelente. Márcio muito atencioso explica tudo sobre o banho dos pets, tem paciência com o animal além de ser um lugar bem organizado e com boas variedades”</blockquote>
+              <div class="review-author"><span class="review-avatar" aria-hidden="true">R</span><div><strong>Roberto Ribeiro</strong><span>Avaliação no Google Maps</span></div></div>
+            </article>
+          </div>
+          <a class="text-link reviews-source" href="https://www.google.com/maps/place/Pet+Salon+By+Marcio+Rodrigo/@-7.1780533,-34.875345,17z" target="_blank" rel="noopener noreferrer">Veja todas as avaliações no Google <svg><use href="#icon-arrow" /></svg></a>
+        </div>
+      </section>
+
+      <section class="final-cta" id="contato" aria-labelledby="cta-title"><div class="container cta-grid"><div class="cta-copy reveal"><span class="eyebrow">VAMOS CUIDAR DO SEU PET?</span><h2 id="cta-title">Seu pet merece esse carinho. <em>Vamos conversar?</em></h2><p>Entre em contato com nossa equipe e descubra como podemos cuidar do seu melhor amigo.</p><a class="button button-light button-large" data-whatsapp="Olá! Quero conversar sobre um atendimento para o meu pet." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp <svg><use href="#icon-arrow" /></svg></a></div><div class="cta-art reveal"><span class="cta-ring" aria-hidden="true"></span><img src="img/pets/foto-02.jpg" alt="Cão branco atendido na Pet Salon" loading="lazy" /><span class="cta-paw" aria-hidden="true"><svg><use href="#icon-paw" /></svg></span></div></div></section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand brand-footer" href="#inicio"><img src="img/logo-site-transparente.png" alt="Pet Salon by Marcio Rodrigo" width="88" height="88" /><span>Pet Salon<small>by Marcio Rodrigo</small></span></a><p>Estética animal com atenção, carinho e cuidado individualizado para o seu melhor amigo.</p></div><div><h3>Navegue</h3><a href="#inicio">Início</a><a href="#sobre">Sobre nós</a><a href="#servicos">Serviços</a><a href="#produtos">Produtos</a><a href="#localizacao">Localização</a></div><div><h3>Pet Salon</h3><a href="#servicos">Banho com ozônio</a><a href="#produtos">Petshop</a><a href="https://www.instagram.com/petsalonmarciorodrigo/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a data-whatsapp="Olá! Gostaria de falar com a Pet Salon." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div><div><h3>Visite a loja</h3><p>R. Raimundo Adeizo Rodrigues, 17<br />Loja 103 · João Paulo II<br />João Pessoa – PB, 58076-120</p><a href="tel:+558391667053">(83) 9166-7053</a><p>Segunda a sábado · 08h às 18h</p><a href="https://www.google.com/maps/search/?api=1&query=Pet+Salon+By+Marcio+Rodrigo%2C+R.+Raimundo+Adeizo+Rodrigues%2C+17%2C+Jo%C3%A3o+Pessoa" target="_blank" rel="noopener noreferrer">Abrir mapa ↗</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Pet Salon by Marcio Rodrigo. Todos os direitos reservados.</span><span>Feito com cuidado, para quem cuida. <svg><use href="#icon-heart" /></svg></span></div></div></footer>
+    <a class="floating-whatsapp" data-whatsapp="Olá! Gostaria de falar com a Pet Salon." target="_blank" rel="noopener noreferrer" aria-label="Conversar com a Pet Salon pelo WhatsApp"><svg><use href="#icon-chat" /></svg><span>Vamos conversar?</span></a>
+  </body>
+</html>
