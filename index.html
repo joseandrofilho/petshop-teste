@@ -9,8 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=5" />
-    <script src="script.js?v=5" defer></script>
+    <link rel="stylesheet" href="styles.css?v=11" />
+    <script src="vendor/gsap/gsap.min.js" defer></script>
+    <script src="vendor/gsap/DrawSVGPlugin.min.js" defer></script>
+    <script src="vendor/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="vendor/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="vendor/gsap/TextPlugin.min.js" defer></script>
+    <script src="script.js?v=9" defer></script>
+    <script src="motion.js?v=4" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -36,9 +42,12 @@
         <a href="#inicio">Início</a><a href="#sobre">Sobre nós</a><a href="#servicos">Serviços</a><a href="#produtos">Produtos</a><a href="#localizacao">Localização</a><a href="#contato">Contato</a>
         <a class="button button-primary" data-whatsapp="Olá! Quero agendar um atendimento para o meu pet." target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a>
       </nav>
+      <span class="scroll-progress" aria-hidden="true"></span>
     </header>
 
-    <main id="conteudo">
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+    <main id="conteudo" tabindex="-1">
       <section class="hero" id="inicio" aria-labelledby="hero-title">
         <div class="hero-sun" aria-hidden="true"></div>
         <div class="container hero-grid">
@@ -47,11 +56,12 @@
             <h1 id="hero-title">Cuidado que <em>transforma</em> cada detalhe<span class="title-dot">.</span></h1>
             <p>Banho, tosa e estética pet com atenção, carinho e um atendimento pensado para deixar seu melhor amigo ainda mais bonito, confortável e bem cuidado.</p>
             <div class="hero-actions"><a class="button button-primary button-large" data-whatsapp="Olá! Quero agendar um atendimento para o meu pet." target="_blank" rel="noopener noreferrer">Agendar atendimento <svg><use href="#icon-arrow" /></svg></a><a class="text-link" href="#servicos">Conhecer serviços <svg><use href="#icon-arrow" /></svg></a></div>
-            <div class="hero-note"><span class="note-icon"><svg><use href="#icon-heart" /></svg></span><span>Seu pet merece um momento<br />de cuidado especial.</span></div>
+            <div class="hero-note"><span class="note-icon"><svg><use href="#icon-heart" /></svg></span><span aria-label="Seu pet merece um momento de cuidado especial.">Seu pet merece um momento<br /><span class="hero-note-animated" aria-hidden="true">de cuidado especial.</span></span></div>
           </div>
           <div class="hero-art">
             <div class="hero-orbit" aria-hidden="true"></div>
             <div class="hero-image-wrap"><img src="img/hero-cao-gato-editorial.png" alt="Imagem editorial de um cão e um gato juntos" fetchpriority="high" /></div>
+            <svg class="hero-trail" viewBox="0 0 600 560" fill="none" aria-hidden="true"><path class="hero-trail-line" d="M83 112C163 20 340 2 472 73c97 52 132 167 105 274-24 96-100 166-206 183" /><circle cx="371" cy="530" r="5" /></svg>
             <span class="hero-sticker" aria-hidden="true"><svg><use href="#icon-paw" /></svg><span>cuidado<br />com afeto</span></span>
             <span class="hero-star hero-star-one" aria-hidden="true">✦</span><span class="hero-star hero-star-two" aria-hidden="true">✦</span>
           </div>
@@ -153,6 +163,8 @@
     </main>
 
     <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="brand brand-footer" href="#inicio"><img src="img/logo-site-transparente.png" alt="Pet Salon by Marcio Rodrigo" width="88" height="88" /><span>Pet Salon<small>by Marcio Rodrigo</small></span></a><p>Estética animal com atenção, carinho e cuidado individualizado para o seu melhor amigo.</p></div><div><h3>Navegue</h3><a href="#inicio">Início</a><a href="#sobre">Sobre nós</a><a href="#servicos">Serviços</a><a href="#produtos">Produtos</a><a href="#localizacao">Localização</a></div><div><h3>Pet Salon</h3><a href="#servicos">Banho com ozônio</a><a href="#produtos">Petshop</a><a href="https://www.instagram.com/petsalonmarciorodrigo/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a data-whatsapp="Olá! Gostaria de falar com a Pet Salon." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div><div><h3>Visite a loja</h3><p>R. Raimundo Adeizo Rodrigues, 17<br />Loja 103 · João Paulo II<br />João Pessoa – PB, 58076-120</p><a href="tel:+558391667053">(83) 9166-7053</a><p>Segunda a sábado · 08h às 18h</p><a href="https://www.google.com/maps/search/?api=1&query=Pet+Salon+By+Marcio+Rodrigo%2C+R.+Raimundo+Adeizo+Rodrigues%2C+17%2C+Jo%C3%A3o+Pessoa" target="_blank" rel="noopener noreferrer">Abrir mapa ↗</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Pet Salon by Marcio Rodrigo. Todos os direitos reservados.</span><span>Feito com cuidado, para quem cuida. <svg><use href="#icon-heart" /></svg></span></div></div></footer>
+      </div>
+    </div>
     <a class="floating-whatsapp" data-whatsapp="Olá! Gostaria de falar com a Pet Salon." target="_blank" rel="noopener noreferrer" aria-label="Conversar com a Pet Salon pelo WhatsApp"><svg><use href="#icon-chat" /></svg><span>Vamos conversar?</span></a>
   </body>
 </html>

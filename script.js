@@ -29,7 +29,16 @@ document.addEventListener('keydown', (event) => {
 window.addEventListener('resize', () => {
   if (window.innerWidth > 820) closeMenu();
 });
-window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 16), { passive: true });
+const scrollProgress = document.querySelector('.scroll-progress');
+const updateScrollState = () => {
+  header.classList.toggle('scrolled', window.scrollY > 16);
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  scrollProgress.style.transform = `scaleX(${maxScroll > 0 ? Math.min(window.scrollY / maxScroll, 1) : 0})`;
+};
+window.addEventListener('scroll', updateScrollState, { passive: true });
+window.addEventListener('resize', updateScrollState);
+window.addEventListener('load', updateScrollState);
+updateScrollState();
 
 const tabs = [...document.querySelectorAll('.service-tab')];
 function activateTab(tab, moveFocus = false) {
@@ -118,9 +127,44 @@ if (reviewsTrack) {
     const card = reviewsTrack.querySelector('.review-card');
     const gap = parseFloat(getComputedStyle(reviewsTrack).columnGap) || 0;
     const direction = arrow.dataset.reviewDirection === 'next' ? 1 : -1;
-    reviewsTrack.scrollBy({ left: direction * (card.getBoundingClientRect().width + gap), behavior: 'auto' });
+    reviewsTrack.scrollBy({
+      left: direction * (card.getBoundingClientRect().width + gap),
+      behavior: 'smooth'
+    });
   }));
   reviewsTrack.addEventListener('scroll', updateReviewArrows, { passive: true });
   window.addEventListener('resize', updateReviewArrows);
   updateReviewArrows();
+}
+
+// Animate elements once as they enter the viewport. Content remains visible without JS.
+if ('IntersectionObserver' in window && (!window.gsap || !window.ScrollTrigger)) {
+  const revealGroups = [
+    '.benefit-card', '.product-card', '.gallery-item', '.review-card'
+  ];
+  const revealTargets = document.querySelectorAll([
+    '.section-intro', '.section-heading', '.about-photos', '.about-copy',
+    '.service-tabs', '.filter-group', '.location-card', '.map-wrap',
+    '.reviews-note', '.cta-copy', '.cta-art',
+    ...revealGroups
+  ].join(', '));
+
+  revealGroups.forEach((selector) => {
+    document.querySelectorAll(selector).forEach((item, index) => {
+      item.style.setProperty('--reveal-delay', `${Math.min(index, 3) * 65}ms`);
+    });
+  });
+
+  revealTargets.forEach((item) => item.classList.add('reveal'));
+  document.documentElement.classList.add('motion-ready');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    });
+  }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
+
+  revealTargets.forEach((item) => revealObserver.observe(item));
 }
